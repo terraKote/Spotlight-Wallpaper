@@ -39,14 +39,24 @@ namespace Spotlight_Wallpaper
             switch (button.Name)
             {
                 case "wallpaperButton":
-                    images = GetImages(pathToImages, out imageResolutions);
-                    listBox1.Items.Clear();
-                    listBox1.Items.AddRange(imageResolutions);
+                    PickImages();
+                    wallpaperPanel.BringToFront();
+                    break;
+
+                case "aboutButton":
+                    aboutPanel.BringToFront();
                     break;
             }
 
             selectionPicker.Top = button.Top;
             selectedTabLabel.Text = button.Text;
+        }
+
+        private void PickImages()
+        {
+            images = GetImages(pathToImages, out imageResolutions);
+            listBox1.Items.Clear();
+            listBox1.Items.AddRange(imageResolutions);
         }
 
         private void DragWindow(object sender, MouseEventArgs e)

@@ -37,16 +37,19 @@
             this.closeButton = new System.Windows.Forms.Button();
             this.selectedTabLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.wallpaperPanel = new System.Windows.Forms.Panel();
             this.saveButton = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.aboutPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.wallpaperPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.aboutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -160,33 +163,15 @@
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BeginDragWindow);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DragWindow);
             // 
-            // panel4
+            // wallpaperPanel
             // 
-            this.panel4.Controls.Add(this.saveButton);
-            this.panel4.Controls.Add(this.listBox1);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Location = new System.Drawing.Point(180, 112);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(574, 367);
-            this.panel4.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(203, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(368, 310);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(194, 355);
-            this.listBox1.TabIndex = 1;
-            this.listBox1.Click += new System.EventHandler(this.SelectImage);
+            this.wallpaperPanel.Controls.Add(this.saveButton);
+            this.wallpaperPanel.Controls.Add(this.listBox1);
+            this.wallpaperPanel.Controls.Add(this.pictureBox1);
+            this.wallpaperPanel.Location = new System.Drawing.Point(180, 112);
+            this.wallpaperPanel.Name = "wallpaperPanel";
+            this.wallpaperPanel.Size = new System.Drawing.Size(574, 367);
+            this.wallpaperPanel.TabIndex = 5;
             // 
             // saveButton
             // 
@@ -202,10 +187,46 @@
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.SaveImage);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(3, 3);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(194, 355);
+            this.listBox1.TabIndex = 1;
+            this.listBox1.Click += new System.EventHandler(this.SelectImage);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(203, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(368, 310);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.FileName = "image";
             this.saveFileDialog1.Filter = "JPEG|*.jpg";
+            // 
+            // aboutPanel
+            // 
+            this.aboutPanel.Controls.Add(this.label2);
+            this.aboutPanel.Location = new System.Drawing.Point(180, 112);
+            this.aboutPanel.Name = "aboutPanel";
+            this.aboutPanel.Size = new System.Drawing.Size(574, 367);
+            this.aboutPanel.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(156, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(272, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Created by Denis Kushnirenko for educational purposes.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -213,7 +234,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(766, 491);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.aboutPanel);
+            this.Controls.Add(this.wallpaperPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -224,8 +246,10 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            this.wallpaperPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.aboutPanel.ResumeLayout(false);
+            this.aboutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -241,11 +265,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label selectedTabLabel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel wallpaperPanel;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Panel aboutPanel;
+        private System.Windows.Forms.Label label2;
     }
 }
 
