@@ -23,7 +23,7 @@ namespace Spotlight_Wallpaper
         {
             InitializeComponent();
 
-            selectionPicker.Top = wallpaperButton.Top;
+            selectionPicker.Top = aboutButton.Top;
         }
 
         private void AppExit(object sender, EventArgs e)

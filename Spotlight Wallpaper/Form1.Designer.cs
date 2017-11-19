@@ -32,7 +32,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.selectionPicker = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.aboutButton = new System.Windows.Forms.Button();
             this.wallpaperButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.selectedTabLabel = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(69)))));
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.selectionPicker);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.aboutButton);
             this.panel1.Controls.Add(this.wallpaperButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -95,20 +95,20 @@
             this.selectionPicker.Size = new System.Drawing.Size(5, 38);
             this.selectionPicker.TabIndex = 2;
             // 
-            // button3
+            // aboutButton
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(69)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(0, 156);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(177, 38);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "About";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.SelectWindow);
+            this.aboutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(47)))), ((int)(((byte)(69)))));
+            this.aboutButton.FlatAppearance.BorderSize = 0;
+            this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aboutButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.aboutButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.aboutButton.Location = new System.Drawing.Point(0, 156);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(177, 38);
+            this.aboutButton.TabIndex = 4;
+            this.aboutButton.Text = "About";
+            this.aboutButton.UseVisualStyleBackColor = false;
+            this.aboutButton.Click += new System.EventHandler(this.SelectWindow);
             // 
             // wallpaperButton
             // 
@@ -146,9 +146,9 @@
             this.selectedTabLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selectedTabLabel.Location = new System.Drawing.Point(6, 30);
             this.selectedTabLabel.Name = "selectedTabLabel";
-            this.selectedTabLabel.Size = new System.Drawing.Size(160, 33);
+            this.selectedTabLabel.Size = new System.Drawing.Size(96, 33);
             this.selectedTabLabel.TabIndex = 3;
-            this.selectedTabLabel.Text = "Wallpapers";
+            this.selectedTabLabel.Text = "About";
             // 
             // panel2
             // 
@@ -258,7 +258,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button wallpaperButton;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button aboutButton;
         private System.Windows.Forms.Panel selectionPicker;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Panel panel3;
